@@ -90,6 +90,8 @@ spec:
         {{- toYaml .Values.table_manager.nodeSelector | nindent 8 }}
       affinity:
         {{- toYaml .Values.table_manager.affinity | nindent 8 }}
+      topologySpreadConstraints:
+        {{- toYaml .Values.table_manager.topologySpreadConstraints | nindent 8 }}
       tolerations:
         {{- toYaml .Values.table_manager.tolerations | nindent 8 }}
       terminationGracePeriodSeconds: {{ .Values.table_manager.terminationGracePeriodSeconds }}

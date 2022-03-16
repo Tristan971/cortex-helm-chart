@@ -92,6 +92,8 @@ spec:
         {{- toYaml .Values.nginx.nodeSelector | nindent 8 }}
       affinity:
         {{- toYaml .Values.nginx.affinity | nindent 8 }}
+      topologySpreadConstraints:
+         {{- toYaml .Values.nginx.topologySpreadConstraints | nindent 8 }}
       tolerations:
         {{- toYaml .Values.nginx.tolerations | nindent 8 }}
       terminationGracePeriodSeconds: {{ .Values.nginx.terminationGracePeriodSeconds }}

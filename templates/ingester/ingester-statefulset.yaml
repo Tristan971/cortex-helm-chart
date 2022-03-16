@@ -17,7 +17,7 @@ spec:
     matchLabels:
       {{- include "cortex.ingesterSelectorLabels" . | nindent 6 }}
   updateStrategy:
-    {{- toYaml .Values.ingester.statefulStrategy | nindent 4 }}          
+    {{- toYaml .Values.ingester.statefulStrategy | nindent 4 }}
   podManagementPolicy: "{{ .Values.ingester.statefulSet.podManagementPolicy }}"
   serviceName: {{ template "cortex.fullname" . }}-ingester-headless
   {{- if .Values.ingester.persistentVolume.enabled }}
@@ -75,6 +75,8 @@ spec:
         {{- toYaml .Values.ingester.nodeSelector | nindent 8 }}
       affinity:
         {{- toYaml .Values.ingester.affinity | nindent 8 }}
+      topologySpreadConstraints:
+        {{- toYaml .Values.ingester.topologySpreadConstraints | nindent 8 }}
       tolerations:
         {{- toYaml .Values.ingester.tolerations | nindent 8 }}
       terminationGracePeriodSeconds: {{ .Values.ingester.terminationGracePeriodSeconds }}

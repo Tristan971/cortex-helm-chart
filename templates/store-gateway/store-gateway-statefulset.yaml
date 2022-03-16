@@ -73,6 +73,8 @@ spec:
         {{- toYaml .Values.store_gateway.nodeSelector | nindent 8 }}
       affinity:
         {{- toYaml .Values.store_gateway.affinity | nindent 8 }}
+      topologySpreadConstraints:
+        {{- toYaml .Values.store_gateway.topologySpreadConstraints | nindent 8 }}
       tolerations:
         {{- toYaml .Values.store_gateway.tolerations | nindent 8 }}
       terminationGracePeriodSeconds: {{ .Values.store_gateway.terminationGracePeriodSeconds }}

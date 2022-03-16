@@ -98,6 +98,8 @@ spec:
         {{- toYaml .Values.query_scheduler.nodeSelector | nindent 8 }}
       affinity:
         {{- toYaml .Values.query_scheduler.affinity | nindent 8 }}
+      topologySpreadConstraints:
+        {{- toYaml .Values.query_scheduler.topologySpreadConstraints | nindent 8 }}
       tolerations:
         {{- toYaml .Values.query_scheduler.tolerations | nindent 8 }}
       terminationGracePeriodSeconds: {{ .Values.query_scheduler.terminationGracePeriodSeconds }}

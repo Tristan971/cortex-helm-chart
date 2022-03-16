@@ -104,6 +104,8 @@ spec:
         {{- toYaml .Values.distributor.nodeSelector | nindent 8 }}
       affinity:
         {{- toYaml .Values.distributor.affinity | nindent 8 }}
+      topologySpreadConstraints:
+        {{- toYaml .Values.distributor.topologySpreadConstraints | nindent 8 }}
       tolerations:
         {{- toYaml .Values.distributor.tolerations | nindent 8 }}
       terminationGracePeriodSeconds: {{ .Values.distributor.terminationGracePeriodSeconds }}

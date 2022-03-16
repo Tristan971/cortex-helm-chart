@@ -198,6 +198,7 @@ alertmanager:
 
   nodeSelector: {}
   affinity: {}
+  topologySpreadConstraints: {}
   annotations: {}
 
   persistentVolume:
@@ -371,7 +372,7 @@ distributor:
                   values:
                     - distributor
             topologyKey: 'kubernetes.io/hostname'
-
+  topologySpreadConstraints: {}
   annotations: {}
 
   autoscaling:
@@ -480,7 +481,7 @@ ingester:
                   values:
                     - ingester
             topologyKey: 'kubernetes.io/hostname'
-
+  topologySpreadConstraints: {}
   annotations: {}
 
   autoscaling:
@@ -621,6 +622,7 @@ ruler:
 
   nodeSelector: {}
   affinity: {}
+  topologySpreadConstraints: {}
   annotations: {}
 
   startupProbe:
@@ -751,7 +753,7 @@ querier:
                   values:
                     - querier
             topologyKey: 'kubernetes.io/hostname'
-
+  topologySpreadConstraints: {}
   annotations: {}
 
   autoscaling:
@@ -854,7 +856,7 @@ query_frontend:
                   values:
                     - query-frontend
             topologyKey: 'kubernetes.io/hostname'
-
+  topologySpreadConstraints: {}
   annotations: {}
   persistentVolume:
     subPath:
@@ -943,7 +945,7 @@ query_scheduler:
                   values:
                     - query-scheduler
             topologyKey: 'kubernetes.io/hostname'
-
+  topologySpreadConstraints: {}
   annotations: {}
   persistentVolume:
     subPath:
@@ -1022,6 +1024,7 @@ table_manager:
 
   nodeSelector: {}
   affinity: {}
+  topologySpreadConstraints: {}
   annotations: {}
   persistentVolume:
     subPath:
@@ -1101,6 +1104,7 @@ configs:
 
   nodeSelector: {}
   affinity: {}
+  topologySpreadConstraints: {}
   annotations: {}
   persistentVolume:
     subPath:
@@ -1212,6 +1216,7 @@ nginx:
 
   nodeSelector: {}
   affinity: {}
+  topologySpreadConstraints: {}
   annotations: {}
   persistentVolume:
     subPath:
@@ -1314,7 +1319,7 @@ store_gateway:
                   values:
                     - store-gateway
             topologyKey: 'kubernetes.io/hostname'
-
+  topologySpreadConstraints: {}
   annotations: {}
 
   persistentVolume:
@@ -1432,7 +1437,7 @@ compactor:
                   values:
                     - compactor
             topologyKey: 'kubernetes.io/hostname'
-
+  topologySpreadConstraints: {}
   annotations: {}
 
   persistentVolume:

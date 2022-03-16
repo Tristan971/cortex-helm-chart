@@ -4,6 +4,7 @@
 
 * [FEATURE] Add Query-Scheduler #268
 * [ENHANCEMENT] Allow StoreGateway podManagementPolicy to be changed #332
+* [ENHANCEMENT] Add support for defining [topologySpreadConstraints](https://kubernetes.io/docs/concepts/workloads/pods/pod-topology-spread-constraints/) on all components #335
 * [BUGFIX] Correct a typo in enabling distributor HPA #334
 * [BUGFIX] Add service discovery method for query-scheduler addresses #338
 
